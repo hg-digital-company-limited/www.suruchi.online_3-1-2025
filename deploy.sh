@@ -31,12 +31,11 @@ else
     exit 1
 fi
 
-cd $PROJECT_DIR
- 
+# Cài đặt các gói Composer
 
 # Phân quyền thư mục
 sudo chmod -R 777 $PROJECT_DIR
 
- 
+# Tạo symbolic link cho storage
 
 echo "Triển khai hoàn tất."
