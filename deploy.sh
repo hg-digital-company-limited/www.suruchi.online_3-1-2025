@@ -4,9 +4,9 @@
 PROJECT_DIR="/var/www/www.suruchi.online"
 GIT_REPO="https://github.com/hg-digital-company-limited/www.suruchi.online_3-1-2025.git"
 SQL_FILE="${PROJECT_DIR}/suruchi.sql"
-DB_NAME="suruchi"
-DB_USER="suruchi"
-DB_PASSWORD="suruchi"  # Thay đổi mật khẩu nếu cần
+DB_NAME="suruchi1"
+DB_USER="suruchi1"
+DB_PASSWORD="suruchi1"  # Thay đổi mật khẩu nếu cần
 
 # Xóa thư mục dự án
 sudo rm -rf ${PROJECT_DIR}/*
