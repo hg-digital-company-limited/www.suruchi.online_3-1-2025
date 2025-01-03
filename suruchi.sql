@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 03, 2025 at 10:53 AM
+-- Generation Time: Jan 03, 2025 at 11:13 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.2.27
 
@@ -379,7 +379,7 @@ CREATE TABLE `users` (
   `id` int NOT NULL,
   `username` varchar(50) COLLATE utf8mb3_unicode_ci NOT NULL,
   `password` varchar(50) COLLATE utf8mb3_unicode_ci NOT NULL,
-  `name` varchar(50) COLLATE utf8mb3_unicode_ci NOT NULL,
+  `name` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `img` varchar(255) COLLATE utf8mb3_unicode_ci NOT NULL DEFAULT 'avatar.png',
   `address` varchar(100) COLLATE utf8mb3_unicode_ci DEFAULT NULL,
   `email` varchar(50) COLLATE utf8mb3_unicode_ci NOT NULL,
@@ -400,7 +400,8 @@ INSERT INTO `users` (`id`, `username`, `password`, `name`, `img`, `address`, `em
 (74, 'Linh', '123456', '', 'avatar.png', NULL, 'linh@123.com', NULL, 0),
 (75, 'hân', '123456', '', 'avatar.png', NULL, 'Han@123.com', NULL, 0),
 (76, 'Hùng', '123456', '', 'avatar.png', NULL, 'Hung@123.com', NULL, 0),
-(77, 'Quang', '123456', '', 'avatar.png', NULL, 'Quang@123.com', NULL, 0);
+(77, 'Quang', '123456', '', 'avatar.png', NULL, 'Quang@123.com', NULL, 0),
+(78, '2509roblox', '2509roblox', NULL, 'avatar.png', NULL, '2509roblox@gmail.com', NULL, 0);
 
 --
 -- Indexes for dumped tables
@@ -511,7 +512,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
 
 --
 -- Constraints for dumped tables

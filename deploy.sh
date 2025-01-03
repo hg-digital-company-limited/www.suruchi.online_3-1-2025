@@ -16,12 +16,11 @@ sudo rm -rf ${PROJECT_DIR}/.[^.]*
 sudo git clone $GIT_REPO $PROJECT_DIR
 
 # Xóa và tạo lại database
-sudo mysql  "\
-DROP DATABASE IF EXISTS $DB_NAME;\
-CREATE DATABASE $DB_NAME;\
-CREATE USER IF NOT EXISTS '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';\
-GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';\
-FLUSH PRIVILEGES;"
+sudo mysql -e "DROP DATABASE IF EXISTS $DB_NAME;"
+sudo mysql -e "CREATE DATABASE $DB_NAME;"
+sudo mysql -e "CREATE USER IF NOT EXISTS '$DB_USER'@'localhost' IDENTIFIED BY '$DB_PASSWORD';"
+sudo mysql -e "GRANT ALL PRIVILEGES ON $DB_NAME.* TO '$DB_USER'@'localhost';"
+sudo mysql -e "FLUSH PRIVILEGES;"
 
 # Nhập dữ liệu từ file SQL
 if [ -f "$SQL_FILE" ]; then
