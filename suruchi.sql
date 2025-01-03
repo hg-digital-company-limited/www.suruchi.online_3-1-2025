@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 03, 2025 at 11:13 AM
+-- Generation Time: Jan 03, 2025 at 11:28 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.2.27
 
@@ -145,20 +145,22 @@ CREATE TABLE `category` (
   `id` int NOT NULL,
   `name` varchar(100) COLLATE utf8mb3_unicode_ci NOT NULL,
   `img` varchar(250) COLLATE utf8mb3_unicode_ci NOT NULL,
-  `stt` tinyint DEFAULT NULL
+  `stt` tinyint DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_unicode_ci;
 
 --
 -- Dumping data for table `category`
 --
 
-INSERT INTO `category` (`id`, `name`, `img`, `stt`) VALUES
-(1, 'Đồng hồ Casio nam ', 'CASIO1.webp', 1),
-(2, 'Đồng hồ nữ', 'CASION7.webp', 2),
-(3, 'Đồng hồ Seiko ', 'SEIKO1.webp', 3),
-(5, 'Đồng hồ Bentley', 'Bentley1.webp', 0),
-(8, 'Đồng hồ Olym Pianus', 'Olym1.webp', 0),
-(11, '1', '4f21210f1b414708bb3a4c3b2ec50e4a_DSC_5363.jpg', NULL);
+INSERT INTO `category` (`id`, `name`, `img`, `stt`, `created_at`) VALUES
+(1, 'Đồng hồ Casio nam ', 'CASIO1.webp', 1, '2025-01-03 11:26:29'),
+(2, 'Đồng hồ nữ', 'CASION7.webp', 2, '2025-01-03 11:26:29'),
+(3, 'Đồng hồ Seiko ', 'SEIKO1.webp', 3, '2025-01-03 11:26:29'),
+(5, 'Đồng hồ Bentley', 'Bentley1.webp', 0, '2025-01-03 11:26:29'),
+(8, 'Đồng hồ Olym Pianus', 'Olym1.webp', 0, '2025-01-03 11:26:29'),
+(11, '1', '4f21210f1b414708bb3a4c3b2ec50e4a_DSC_5363.jpg', NULL, '2025-01-03 11:26:29'),
+(12, '111', '2aaca8db1ee44b989194d5ce831bee02_DSC_5351.webp', NULL, '2025-01-03 11:26:40');
 
 -- --------------------------------------------------------
 
@@ -488,7 +490,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `comment`

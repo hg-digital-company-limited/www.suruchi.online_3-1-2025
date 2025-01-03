@@ -45,7 +45,7 @@ function danhmuc_delete($id){
  * @throws PDOException lỗi truy vấn
  */
 function danhmuc_all(){
-    $sql = "SELECT * FROM category ORDER BY id";
+    $sql = "SELECT * FROM category ORDER BY created_at DESC";
     return pdo_query($sql);
 }
 

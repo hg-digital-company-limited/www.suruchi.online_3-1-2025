@@ -9,6 +9,7 @@
                             <td>'.$id.'</td>    
                             <td><img  src="../uploads/'.$img.'" style="width: 50px; alt="" ></td>
                             <td><b>'.$name.'</b></td>
+                            <td>'.$created_at.'</td>
                             <td class="text-end">
                                 <div class="dropdown">
                                     <a href="#" data-bs-toggle="dropdown" class="btn btn-light rounded btn-sm font-sm"> <i class="material-icons md-more_horiz"></i> </a>
@@ -70,6 +71,7 @@
                                     <th>STT</th>
                                     <th>Ảnh danh mục</th>
                                     <th>Tên Danh Mục</th>
+                                    <th>Ngày tạo</th>
                                     <th class="text-end">Action</th>
                                 </tr>
                             </thead>
